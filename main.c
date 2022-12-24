@@ -9,10 +9,10 @@ struct Circle {
     float y_coordinates;
 };
 
-float GetArea(float radius) {
-    
-    return 3.14 * radius * radius;
-};
+float GetArea(struct Circle *c) {
+    return 3.14 * c->radius * c->radius;
+}
+
 struct All_numbs {
     unsigned int als: 3;
 };
@@ -30,7 +30,7 @@ int main() {
     enum PrintProduct product = newspaper;
     printf("newspaper-%d\n", product);
     struct Circle c1 = {10, 0, 0};
-    float area = GetArea(c1.radius);
+    float area = GetArea(c1);
     printf("%f\n", area);
     int num;
     scanf("%x", &num);
